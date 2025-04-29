@@ -17,8 +17,12 @@ class OnboardingViewModel(
 
     init {
         viewModelScope.launch {
-            isOnboardingDone.update { dataStoreRepository.getOnboardingDone().first() ?: false }
+            isOnboardingDone.update { getOnboardingDone() }
         }
+    }
+
+    suspend fun getOnboardingDone() : Boolean {
+        return dataStoreRepository.getOnboardingDone().first() ?: false
     }
 
     fun onButtonClick() {

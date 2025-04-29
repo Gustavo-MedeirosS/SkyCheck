@@ -50,6 +50,11 @@ android {
             excludes += "/META-INF/*"
         }
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {

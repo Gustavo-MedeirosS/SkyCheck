@@ -2,7 +2,6 @@ package com.example.skycheck.utils
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import com.example.skycheck.R
 import java.time.LocalDate
 
 object Constants {

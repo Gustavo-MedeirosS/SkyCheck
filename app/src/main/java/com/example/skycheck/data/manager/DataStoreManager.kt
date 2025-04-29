@@ -10,17 +10,17 @@ import kotlinx.coroutines.flow.map
 
 private val Context.dataStore by preferencesDataStore(name = Constants.USER_PREFERENCES)
 
-class DataStoreManager(private val context: Context) {
+open class DataStoreManager(private val context: Context) {
 
     private val ONBOARDING_DONE = booleanPreferencesKey(name = Constants.ONBOARDING_DONE)
 
-    suspend fun setOnboardingDone() {
+    open suspend fun setOnboardingDone() {
         context.dataStore.edit { preferences ->
             preferences[ONBOARDING_DONE] = true
         }
     }
 
-    fun getOnboardingDone(): Flow<Boolean?> = context.dataStore.data.map { preferences ->
+    open fun getOnboardingDone(): Flow<Boolean?> = context.dataStore.data.map { preferences ->
         preferences[ONBOARDING_DONE]
     }
 }
