@@ -42,8 +42,7 @@ class LocationRepositoryImpl(
 
     override suspend fun getSavedLocations(): List<Location> {
         return try {
-            val locations = locationDao.getLocations().first()
-            locations
+            locationDao.getLocations().first()
         } catch (e: Exception) {
             Log.e(
                 "currentLocation",

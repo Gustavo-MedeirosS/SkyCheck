@@ -8,7 +8,6 @@ import com.example.skycheck.data.model.dto.Next5DaysForecastDto
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
-import io.mockk.verify
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert
 import org.junit.Before

@@ -3,7 +3,6 @@ package com.example.skycheck.data.mocks
 import com.example.skycheck.data.model.dto.ForecastDto
 import com.example.skycheck.data.model.dto.GeocodeLocationDto
 import com.example.skycheck.data.model.dto.Next5DaysForecastDto
-import okhttp3.ResponseBody
 import okhttp3.ResponseBody.Companion.toResponseBody
 import retrofit2.Response
 
